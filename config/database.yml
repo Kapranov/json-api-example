@@ -1,0 +1,14 @@
+default: &default
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: db/json-api-example_development
+  host: localhost
+
+test:
+  <<: *default
+  database: db/json-api-example_test
+  host: localhost
